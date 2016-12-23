@@ -1,4 +1,3 @@
-/* eslint-disable no-magic-numbers */
 import * as rutHelpers from '../src/rut-helpers.js';
 
 
