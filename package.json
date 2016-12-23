@@ -5,6 +5,10 @@
   "main": "dist/rut-helpers.js",
   "author": "Guillermo Moreno <gmq@guillermomoreno.cl>",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/platanus/rut-helpers.git"
+  },
   "scripts": {
     "build": "babel src --out-dir dist",
     "prepublish": "babel-node spec/run.js && npm run build",
