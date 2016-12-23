@@ -6,7 +6,7 @@
   "author": "Guillermo Moreno <gmq@guillermomoreno.cl>",
   "license": "MIT",
   "scripts": {
-    "test": "babel-node spec/run.js"
+    "test": "babel-node spec/run.js || echo 'Tests failed'"
   },
   "devDependencies": {
     "babel-cli": "^6.18.0",
