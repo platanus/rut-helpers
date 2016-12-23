@@ -20,6 +20,15 @@ export function rutValidate(value) {
   return (checkDigit === rut.slice(-1));
 }
 
-export function rutFormat() {
+export function rutFormat(value) {
+  const rut = cleanRut(value);
 
+  if (rut.length <= 1) return rut;
+
+  let result = `${rut.slice(-4, -1)}-${rut.substr(rut.length - 1)}`;
+  for (let i = 4; i < rut.length; i += 3) {
+    result = `${rut.slice(-3 - i, -i)}.${result}`;
+  }
+
+  return result;
 }
