@@ -36,4 +36,10 @@ describe('rutHelper', () => {
       expect(rutHelpers.rutFormat('15435234523462346')).toBe('1.543.523.452.346.234-6');
     });
   });
+
+  describe('rutHelper.rutClean', () => {
+    it('should return clean string', () => {
+      expect(rutHelpers.rutClean('7.618.285-K')).toBe('7618285K');
+    });
+  });
 });

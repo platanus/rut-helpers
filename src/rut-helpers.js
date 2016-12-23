@@ -1,12 +1,12 @@
 
-function cleanRut(value) {
+export function rutClean(value) {
   return typeof value === 'string' ? value.replace(/[^0-9kK]+/g, '').toUpperCase() : '';
 }
 
 export function rutValidate(value) {
   if (typeof value !== 'string') return false;
 
-  const rut = cleanRut(value);
+  const rut = rutClean(value);
   let rutDigits = parseInt(rut.slice(0, -1), 10);
   let m = 0;
   let s = 1;
@@ -21,7 +21,7 @@ export function rutValidate(value) {
 }
 
 export function rutFormat(value) {
-  const rut = cleanRut(value);
+  const rut = rutClean(value);
 
   if (rut.length <= 1) return rut;
 

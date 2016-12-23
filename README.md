@@ -49,3 +49,12 @@ rutHelpers.rutFormat('7618285K');
 // 7.618.285-K
 
 ```
+
+### Cleaning RUTs
+
+```javascript
+
+rutHelpers.rutClean('7.618.285-K');
+// 7618285K
+
+```

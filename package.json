@@ -1,6 +1,6 @@
 {
   "name": "rut-helpers",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Validate and format strings to RUT (Chilean DNI)",
   "main": "dist/rut-helpers.js",
   "author": "Guillermo Moreno <gmq@guillermomoreno.cl>",
