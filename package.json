@@ -3,10 +3,16 @@
   "version": "0.0.1",
   "description": "Validate and format strings to RUT (Chilean DNI)",
   "main": "dist/rut-helpers.js",
+  "files": [
+    "dist",
+    "README.md",
+    "yarn.lock"
+  ],
   "author": "Guillermo Moreno <gmq@guillermomoreno.cl>",
   "license": "MIT",
   "scripts": {
     "build": "babel src --out-dir dist",
+    "prebuild": "rm -rf dist",
     "test": "jasmine"
   },
   "devDependencies": {
