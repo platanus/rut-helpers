@@ -1,10 +1,13 @@
 import * as rutHelpers from '../src/rut-helpers.js';
 
-
 describe('rutHelper', () => {
   describe('rutHelper.rutValidate', () => {
     it('should return true if string is a valid rut', () => {
       expect(rutHelpers.rutValidate('7.618.285-K')).toBe(true);
+    });
+
+    it('should return true if string is a valid rut without punctuation', () => {
+      expect(rutHelpers.rutValidate('7618212K')).toBe(false);
     });
 
     it('should return false if string is not a valid rut', () => {
