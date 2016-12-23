@@ -1,0 +1,16 @@
+{
+  "name": "rut-helpers",
+  "version": "0.0.1",
+  "description": "Validate and format strings to RUT (Chilean DNI)",
+  "main": "index.js",
+  "author": "Guillermo Moreno <gmq@guillermomoreno.cl>",
+  "license": "MIT",
+  "scripts": {
+    "test": "babel-node spec/run.js"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-preset-es2015": "^6.18.0",
+    "jasmine": "^2.5.2"
+  }
+}
