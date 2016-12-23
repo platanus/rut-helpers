@@ -1,5 +1,7 @@
 # Rut Helpers
 
+[![Build Status](https://travis-ci.org/platanus/rut-helpers.svg?branch=master)](https://travis-ci.org/platanus/rut-helpers)
+
 A small collection of helpers to validate and format strings to RUT (Chilean DNI).
 
 ## Installation
@@ -20,41 +22,52 @@ yarn add rut-helpers
 import * as rutHelpers from 'rut-helpers';
 
 // Or import only what you need.
-import { rutValidator, rutFormat } from 'rut-helpers';
+import { rutValidate, rutFormat } from 'rut-helpers';
 
 // Or with node
 var rutHelpers = require('rut-helpers');
 ```
 
 ### Validating RUTs
-
 ```javascript
 
-rutHelpers.rutValidator('THIS IS A RUT');
+rutHelpers.rutValidate('THIS IS A RUT');
 // false
 
-rutHelpers.rutValidator('7.618.285-K');
+rutHelpers.rutValidate('7.618.285-K');
 // true
 
-rutHelpers.rutValidator('7618285K');
+rutHelpers.rutValidate('7618285K');
 // true
-
 ```
 
 ### Formatting strings as RUTs
 
 ```javascript
-
 rutHelpers.rutFormat('7618285K');
 // 7.618.285-K
-
 ```
 
 ### Cleaning RUTs
 
 ```javascript
-
 rutHelpers.rutClean('7.618.285-K');
 // 7618285K
-
 ```
+
+## Contributing
+
+If you want to add functionality please go to
+the [contributing](/docs/CONTRIBUTING.md)
+
+## Credits
+
+Thank you [contributors](https://github.com/platanus/rut-helpers/graphs/contributors)!
+
+<img src="http://platan.us/gravatar_with_text.png" alt="Platanus" width="250"/>
+
+rut-helpers is maintained by [platanus](http://platan.us).
+
+## License
+
+Potassium is © 2017 platanus, spa. It is free software and may be redistributed under the terms specified in the LICENSE file.
