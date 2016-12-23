@@ -7,7 +7,7 @@
   "license": "MIT",
   "scripts": {
     "build": "babel src --out-dir dist",
-    "prepublish": "npm run build",
+    "prepublish": "babel-node spec/run.js && npm run build",
     "test": "babel-node spec/run.js || echo 'Tests failed'"
   },
   "devDependencies": {
