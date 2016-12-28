@@ -1,4 +1,4 @@
-import * as rutHelpers from '../src/rut-helpers.js';
+import * as rutHelpers from '../dist/rut-helpers.js';
 
 describe('rutHelper', () => {
   describe('rutHelper.rutValidate', () => {
