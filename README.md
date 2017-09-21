@@ -70,4 +70,4 @@ rut-helpers is maintained by [platanus](http://platan.us).
 
 ## License
 
-Potassium is © 2017 platanus, spa. It is free software and may be redistributed under the terms specified in the LICENSE file.
+rut-helpers is © 2017 platanus, spa. It is free software and may be redistributed under the terms specified in the LICENSE file.
