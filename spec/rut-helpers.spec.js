@@ -21,6 +21,10 @@ describe('rutHelper', () => {
     it('should return false if string is not a string', () => {
       expect(rutHelpers.rutValidate(194453426)).toBe(false);
     });
+
+    it('should return false if a valid rut with more than one K', () => {
+      expect(rutHelpers.rutValidate('23100484KK')).toBe(false);
+    });
   });
 
   describe('rutHelper.rutFormat', () => {
