@@ -7,11 +7,12 @@ describe('rutHelper', () => {
     });
 
     it('should return true if string is a valid rut without punctuation', () => {
-      expect(rutHelpers.rutValidate('7618212K')).toBe(false);
+      expect(rutHelpers.rutValidate('7618285K')).toBe(true);
     });
 
     it('should return false if string is not a valid rut', () => {
       expect(rutHelpers.rutValidate('7.618.212-K')).toBe(false);
+      expect(rutHelpers.rutValidate('7618212K')).toBe(false);
     });
 
     it('should return false if string is empty', () => {
@@ -28,6 +29,10 @@ describe('rutHelper', () => {
       expect(rutHelpers.rutFormat('7618285K')).toBe('7.618.285-K');
     });
 
+    it('should return formatted rut removing any leading zeros', () => {
+      expect(rutHelpers.rutFormat('0007618285K')).toBe('7.618.285-K');
+    });
+
     it('should return formatted rut if string is an already formatted rut', () => {
       expect(rutHelpers.rutFormat('7.618.285-K')).toBe('7.618.285-K');
     });
@@ -40,6 +45,10 @@ describe('rutHelper', () => {
   describe('rutHelper.rutClean', () => {
     it('should return clean string', () => {
       expect(rutHelpers.rutClean('7.618.285-K')).toBe('7618285K');
+    });
+
+    it('should strip leading zeros', () => {
+      expect(rutHelpers.rutClean('007.618.285-K')).toBe('7618285K');
     });
   });
 });
