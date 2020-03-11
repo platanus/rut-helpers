@@ -8,8 +8,17 @@ export function rutClean(value: string) {
   return '';
 }
 
+export function hasMoreThanOneCheckDigitK(value: string) {
+  const moreThanOneK = new RegExp(/[kK]{2}/g);
+  return moreThanOneK.test(value);
+}
+
 export function rutValidate(value: string) {
   if (typeof value !== 'string') {
+    return false;
+  }
+
+  if(hasMoreThanOneCheckDigitK(value)) {
     return false;
   }
 
