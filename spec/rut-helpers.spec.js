@@ -49,6 +49,7 @@ describe('rutHelper', () => {
 
     it('should strip leading zeros', () => {
       expect(rutHelpers.rutClean('007.618.285-K')).toBe('7618285K');
+      expect(rutHelpers.rutClean('0.007.618.285-K')).toBe('7618285K');
     });
   });
 });

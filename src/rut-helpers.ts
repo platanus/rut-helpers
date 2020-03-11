@@ -1,8 +1,8 @@
 export function rutClean(value: string) {
   if (typeof value === 'string') {
     return value
-      .replace(/^0+/, '')
       .replace(/[^0-9kK]+/g, '')
+      .replace(/^0+/, '')
       .toUpperCase();
   }
   return '';
