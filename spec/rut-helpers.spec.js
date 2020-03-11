@@ -10,6 +10,11 @@ describe('rutHelper', () => {
       expect(rutHelpers.rutValidate('7618285K')).toBe(true);
     });
 
+    it('should return false if string is a valid rut with extra characters', () => {
+      expect(rutHelpers.rutValidate('7618285K1K')).toBe(false);
+      expect(rutHelpers.rutValidate('7618285KK')).toBe(false);
+    });
+
     it('should return false if string is not a valid rut', () => {
       expect(rutHelpers.rutValidate('7.618.212-K')).toBe(false);
       expect(rutHelpers.rutValidate('7618212K')).toBe(false);
