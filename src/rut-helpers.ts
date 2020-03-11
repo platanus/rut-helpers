@@ -1,5 +1,11 @@
 export function rutClean(value: string) {
-  return typeof value === 'string' ? value.replace(/[^0-9kK]+/g, '').toUpperCase() : '';
+  if (typeof value === 'string') {
+    return value
+      .replace(/[^0-9kK]+/g, '')
+      .replace(/^0+/, '')
+      .toUpperCase();
+  }
+  return '';
 }
 
 export function rutValidate(value: string) {
