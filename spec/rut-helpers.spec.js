@@ -4,6 +4,7 @@ describe('rutHelper', () => {
   describe('rutHelper.rutValidate', () => {
     it('should return true if string is a valid rut', () => {
       expect(rutHelpers.rutValidate('7.618.285-K')).toBe(true);
+      expect(rutHelpers.rutValidate('1-9')).toBe(true);
     });
 
     it('should return true if string is a valid rut without punctuation', () => {

@@ -15,7 +15,7 @@ export function rutValidate(value: string) {
 
   const rut: string = rutClean(value);
 
-  if (!rut.match(/\d{2}(\d|[kK])$/)) return false;
+  if (!rut.match(/(^\d|\d{2})(\d|[kK])$/)) return false;
 
   let rutDigits: number = parseInt(rut.slice(0, -1), 10);
   let m: number = 0;
