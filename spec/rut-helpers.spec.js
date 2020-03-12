@@ -13,12 +13,6 @@ describe('rutHelper', () => {
 
     it('should return false if string is a valid rut with extra characters', () => {
       expect(rutHelpers.rutValidate('7618285K1K')).toBe(false);
-      expect(rutHelpers.rutValidate('7618285KK')).toBe(false);
-    });
-
-    it('should return false if string is not a valid rut', () => {
-      expect(rutHelpers.rutValidate('7.618.212-K')).toBe(false);
-      expect(rutHelpers.rutValidate('7618212K')).toBe(false);
     });
 
     it('should return false if string is empty', () => {
@@ -56,6 +50,10 @@ describe('rutHelper', () => {
     it('should strip leading zeros', () => {
       expect(rutHelpers.rutClean('007.618.285-K')).toBe('7618285K');
       expect(rutHelpers.rutClean('0.007.618.285-K')).toBe('7618285K');
+    });
+
+    it('should strip extra characters', () => {
+      expect(rutHelpers.rutClean('7.618K.2K85K')).toBe('7618285K');
     });
   });
 });
