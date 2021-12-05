@@ -13,6 +13,10 @@ export function rutValidate(value: string) {
     return false;
   }
 
+  if (/[A-Za-z]/g.test(value.replace(/[kK]/g, ''))) {
+    return false
+  }
+
   const rut: string = rutClean(value);
   let rutDigits: number = parseInt(rut.slice(0, -1), 10);
   let m: number = 0;
